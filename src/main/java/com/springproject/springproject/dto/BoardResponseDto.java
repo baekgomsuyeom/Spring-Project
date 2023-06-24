@@ -25,6 +25,7 @@ public class BoardResponseDto {
         this.modifiedAt = board.getModifiedAt();
     }
 
+    // 게시글 삭제 시, 삭제 성공 메시지
     public BoardResponseDto(String msg) {
         this.msg = msg;
     }

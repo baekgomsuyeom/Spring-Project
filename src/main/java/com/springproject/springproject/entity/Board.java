@@ -9,7 +9,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "board")   // 매핑할 테이블의 이름을 지정
+@Table(name = "board")
 @NoArgsConstructor
 public class Board extends Timestamped {
     @Id
