@@ -10,7 +10,8 @@
 
 ## 4. Q & A
 ### Q1) 수정, 삭제 API의 request를 어떤 방식으로 사용하셨나요? (param, query, body)
-#### A1. JSON을 반환하는 API를 사용하라는 조건이 있었기 때문에 body 를 사용했다.
+#### A1. 
+JSON을 반환하는 API를 사용하라는 조건이 있었기 때문에 body 를 사용했다.
 
 ### Q2) 어떤 상황에 어떤 방식의 request를 써야하나요?
 #### A2.
@@ -24,7 +25,9 @@ RESTful한 API 설계 : URL에는 명사를 사용, CRUD 기능 POST로만 처�
 Stateless (무상태성),  Cacheable (캐시 가능), Self-descriptiveness (자체 표현 구조), 계층형 구조 같은 부분들은 고려되지 않았던 것 같다.
 
 ### Q4) 적절한 관심사 분리를 적용하였나요? (Controller, Repository, Service)
-#### A4. Entity 는 board 객체 하나였는데, 한 객체를 기준으로 봤을 땐 잘 분리됐다고 생각한다.
+#### A4. 
+Entity 는 board 객체 하나였는데, 한 객체를 기준으로 봤을 땐 잘 분리됐다고 생각한다.
 
 ### Q5) API 명세서 작성 가이드라인을 검색하여 직접 작성한 API 명세서와 비교해보세요!
-#### A5. 네
+#### A5. 
+네
