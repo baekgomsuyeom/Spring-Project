@@ -12,9 +12,7 @@ public class BoardResponseDto {
     private String contents;    // 작성 내용
     private LocalDateTime createdAt;        // 게시글 생성 날짜
     private LocalDateTime modifiedAt;       // 게시글 수정 날짜
-
     private String msg;     // 게시글 삭제 시, 삭제 성공 메시지
-
 
     public BoardResponseDto(Board board) {
         this.id = board.getId();

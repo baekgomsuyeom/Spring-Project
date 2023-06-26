@@ -18,16 +18,16 @@ public class BoardService {
 
     // 게시글 작성
     public BoardResponseDto createBoard(BoardRequestDto requestDto) {
-        Board board = new Board(requestDto);        // RequestDto -> Entity
-        Board saveBoard = boardRepository.save(board);      // DB 저장
-        BoardResponseDto boardResponseDto = new BoardResponseDto(saveBoard);        // Entity -> ResponseDto
+        Board board = new Board(requestDto);
+        Board saveBoard = boardRepository.save(board);
+        BoardResponseDto boardResponseDto = new BoardResponseDto(saveBoard);
 
         return boardResponseDto;
     }
 
     // 게시글 전체 조회
     public List<BoardResponseDto> getBoardList() {
-        return boardRepository.findAllByOrderByModifiedAtDesc().stream().map(BoardResponseDto::new).toList();       // DB 조회
+        return boardRepository.findAllByOrderByModifiedAtDesc().stream().map(BoardResponseDto::new).toList();
     }
 
     // 게시글 선택 조회
@@ -44,11 +44,12 @@ public class BoardService {
     // 게시글 수정
     @Transactional
     public BoardResponseDto updateBoard(Long id, BoardRequestDto requestDto) {
-        Board board = findBoard(id);        // DB에 해당 id 의 게시글이 존재하는지 확인
+        // DB에 해당 id 의 게시글이 존재하는지 확인
+        Board board = findBoard(id);
 
         // 비밀번호 일치 여부 확인
         if (board.getPassword().equals(requestDto.getPassword())) {
-            board.update(requestDto);       // 일치하면 게시글 수정
+            board.update(requestDto);
         } else {
             return new BoardResponseDto("비밀번호가 일치하지 않습니다.");
         }
@@ -61,8 +62,8 @@ public class BoardService {
         Board board = findBoard(id);
 
         // 비밀번호 일치 여부 확인
-        if (board.getPassword().equals(board.getPassword())) {
-            boardRepository.delete(board);        // 일치하면 게시글 삭제
+        if (board.getPassword().equals(password)) {
+            boardRepository.delete(board);
         } else {
             return new BoardResponseDto("비밀번호가 일치하지 않습니다.");
         }
