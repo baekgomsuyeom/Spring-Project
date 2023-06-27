@@ -3,10 +3,10 @@
 ![image](https://github.com/baekgomsuyeom/Spring-Project/assets/117441902/faea05ac-ff9e-4ab2-b334-ac7972e33895)
 
 ## 2. 유스케이스 다이어그램
-![Spring 입문 주차 유스케이스 다이어그램](https://github.com/baekgomsuyeom/Spring-Project/assets/117441902/1afe5792-d3d0-4dee-8d68-70753e4d76a7)
+![Spring 입문 주차 유스케이스 다이어그램](https://github.com/baekgomsuyeom/Spring-Project/assets/117441902/1a0c9b02-b9e8-48dc-b009-55991ebd6f33)
 
 ## 3. Api 명세서
-![Spring 입문 주차 API 명세서](https://github.com/baekgomsuyeom/Spring-Project/assets/117441902/1648bd40-b77b-47be-a44a-9b249428e951)
+![Spring 입문 주차 API 명세서](https://github.com/baekgomsuyeom/Spring-Project/assets/117441902/84d4d483-3000-4a38-afbb-8647225f15c8)
 
 ## 4. Q & A
 ### Q1) 수정, 삭제 API의 request를 어떤 방식으로 사용하셨나요? (param, query, body)
