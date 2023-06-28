@@ -45,3 +45,4 @@ public class BoardController {
         return boardService.deleteBoard(id, requestDto);
     }
 }
+// test
