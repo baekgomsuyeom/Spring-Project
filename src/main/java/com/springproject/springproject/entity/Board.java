@@ -8,7 +8,6 @@ import lombok.Setter;
 
 @Entity
 @Getter
-@Setter
 @Table(name = "board")
 @NoArgsConstructor
 public class Board extends Timestamped {
@@ -40,7 +39,6 @@ public class Board extends Timestamped {
     public void update(BoardRequestDto requestDto) {
         this.title = requestDto.getTitle();
         this.username = requestDto.getUsername();
-        this.password = requestDto.getPassword();
         this.contents = requestDto.getContents();
     }
 }

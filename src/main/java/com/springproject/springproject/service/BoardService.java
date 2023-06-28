@@ -58,11 +58,11 @@ public class BoardService {
     }
 
     // 게시글 삭제
-    public BoardResponseDto deleteBoard(Long id, String password) {
+    public BoardResponseDto deleteBoard(Long id, BoardRequestDto requestDto) {
         Board board = findBoard(id);
 
         // 비밀번호 일치 여부 확인
-        if (board.getPassword().equals(password)) {
+        if (board.getPassword().equals(requestDto.getPassword())) {
             boardRepository.delete(board);
         } else {
             return new BoardResponseDto("비밀번호가 일치하지 않습니다.");
