@@ -8,7 +8,7 @@ import lombok.Setter;
 
 @Entity
 @Getter
-//@Setter
+@Setter
 @Table(name = "board")
 @NoArgsConstructor
 public class Board extends Timestamped {
@@ -40,7 +40,7 @@ public class Board extends Timestamped {
     public void update(BoardRequestDto requestDto) {
         this.title = requestDto.getTitle();
         this.username = requestDto.getUsername();
-//        this.password = requestDto.getPassword();       // BoardService 에서 비밀번호 일치여부를 확인한 후, password 는 수정하지 않도록 한다. 게시글을 수정할 비밀번호가 필요한 거지, 비밀번호를 변경하는 게 아니기 때문 (db 를 건드릴 필요 X)
+        this.password = requestDto.getPassword();
         this.contents = requestDto.getContents();
     }
 }

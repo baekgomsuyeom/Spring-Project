@@ -58,12 +58,11 @@ public class BoardService {
     }
 
     // 게시글 삭제
-    /* BoardRequestDto 로 이 안의 모든 데이터를 받아왔지만, 그 중 password 만 비교에 사용하는 것도 가능하다. */
-    public BoardResponseDto deleteBoard(Long id, BoardRequestDto requestDto) {      // public BoardResponseDto deleteBoard(Long id, String password) {
+    public BoardResponseDto deleteBoard(Long id, String password) {
         Board board = findBoard(id);
 
         // 비밀번호 일치 여부 확인
-        if (board.getPassword().equals(requestDto.getPassword())) {     // if (board.getPassword().equals(password))
+        if (board.getPassword().equals(password)) {
             boardRepository.delete(board);
         } else {
             return new BoardResponseDto("비밀번호가 일치하지 않습니다.");
