@@ -40,8 +40,8 @@ public class BoardController {
     }
 
     // 게시글 삭제
-    @DeleteMapping("/board/{id}/{password}")
-    public BoardResponseDto deleteBoard(@PathVariable Long id, @PathVariable String password) {
-        return boardService.deleteBoard(id, password);
+    @DeleteMapping("/board/{id}")       // @DeleteMapping("/board/{id}/{password}") -> password 를 주소창에 노출시키지 않고, body 로 받았다
+    public BoardResponseDto deleteBoard(@PathVariable Long id, @RequestBody BoardRequestDto requestDto) {       // (@PathVariable Long id, @PathVariable String password)
+        return boardService.deleteBoard(id, requestDto);        // (id, password)
     }
 }
