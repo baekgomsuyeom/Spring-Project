@@ -1,4 +1,4 @@
-# Spring-Project 입문 주차 과제
+# Spring-Project Lv1 과제
 ## 1. 기능 요구 사항
 ![image](https://github.com/baekgomsuyeom/Spring-Project/assets/117441902/a51fc18a-e6a5-40bf-8ff6-0ab243e90aab)
 
